@@ -1,19 +1,64 @@
-// Suna de dos numeros.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
-//
+#include<iostream>
+#include<cstdlib>
+using namespace std;
 
-#include <iostream>
-
+void pausa();
 int main()
 {
-    std::cout << "Hello World!\n";
+	bool BANDERA = false;
+	char TECLA;
+	do
+	{
+		system("color 65");
+		system("cls");
+		cin.clear();
+		cout << "\n";
+		cout << "							Calculadora" << endl;
+		cout << "							-----------" << endl << endl;
+		cout << "\t1 .- Sumar" << endl;
+		cout << "\t2 .- Restar" << endl;
+		cout << "\t3 .- Multiplicar" << endl;
+		cout << "\t4 .- Dividir" << endl;
+		cout << "\t5 .- Salir" << endl << endl;
+		cout << "	-Elije una opcion: ";
+		cin >> TECLA;
+		switch (TECLA)
+		{
+		case '1':
+			system("cls");
+			cout << "	-Has elejido Sumar. \n";
+			pausa();
+			break;
+		case '2':
+			system("cls");
+			cout << "	-Has elejido Restar. \n";
+			pausa();
+			break;
+		case '3':
+			system("cls");
+			cout << "	-Has elejido Multiplicar. \n";
+			pausa();
+			break;
+		case '4':
+			system("cls");
+			cout << "	-Has elejido Dividir. \n";
+			pausa();
+			break;
+		case '5':
+			BANDERA = true;
+			break;
+		default:
+			system("cls");
+			cout << "	-Opcion no valida. \a\n";
+			pausa();
+			break;
+		}
+	} while (BANDERA != true);
+	return 0;
 }
-
-// Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
-// Depurar programa: F5 o menú Depurar > Iniciar depuración
-
-// Sugerencias para primeros pasos: 1. Use la ventana del Explorador de soluciones para agregar y administrar archivos
-//   2. Use la ventana de Team Explorer para conectar con el control de código fuente
-//   3. Use la ventana de salida para ver la salida de compilación y otros mensajes
-//   4. Use la ventana Lista de errores para ver los errores
-//   5. Vaya a Proyecto > Agregar nuevo elemento para crear nuevos archivos de código, o a Proyecto > Agregar elemento existente para agregar archivos de código existentes al proyecto
-//   6. En el futuro, para volver a abrir este proyecto, vaya a Archivo > Abrir > Proyecto y seleccione el archivo .sln
+void pausa()
+{
+	cout << "	-Pulsa una tecla para continuar...";
+	getwchar();
+	getwchar();
+}
