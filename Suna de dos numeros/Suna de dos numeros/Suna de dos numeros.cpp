@@ -7,6 +7,7 @@ int main()
 {
 	bool BANDERA = false;
 	char TECLA;
+	
 	do
 	{
 		system("color 65");
@@ -61,4 +62,17 @@ void pausa()
 	cout << "	-Pulsa una tecla para continuar...";
 	getwchar();
 	getwchar();
+}
+
+int suma()
+{
+	int a, b, suma;
+	cout << "Primer valor: ";
+	cin >> a;
+	cout << "Segundo valor: ";
+	cin >> b;
+	suma = a + b;
+	cout << "La suma es: " << suma;
+	pausa();
+	return 0;
 }
