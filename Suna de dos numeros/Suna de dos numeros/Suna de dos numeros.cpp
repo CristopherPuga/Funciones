@@ -1,8 +1,11 @@
 #include<iostream>
 #include<cstdlib>
 using namespace std;
-
-void pausa();
+int suma();
+int resta();
+int multiplicacion();
+int division();
+int pausa();
 int main()
 {
 	bool BANDERA = false;
@@ -57,7 +60,7 @@ int main()
 	} while (BANDERA != true);
 	return 0;
 }
-void pausa()
+int pausa()
 {
 	cout << "	-Pulsa una tecla para continuar...";
 	getwchar();
@@ -75,4 +78,42 @@ int suma()
 	cout << "La suma es: " << suma;
 	pausa();
 	return 0;
+}
+
+int resta()
+{
+	int a, b, suma;
+	cout << "Primer valor: ";
+	cin >> a;
+	cout << "Segundo valor: ";
+	cin >> b;
+	suma = a - b;
+	cout << "La suma es: " << suma;
+	pausa();
+	
+}
+int multiplicacion()
+{
+	int a, b, suma;
+	cout << "Primer valor: ";
+	cin >> a;
+	cout << "Segundo valor: ";
+	cin >> b;
+	suma = a * b;
+	cout << "La suma es: " << suma;
+	pausa();
+	
+
+}
+int division()
+{
+	int a, b, suma;
+	cout << "Primer valor: ";
+	cin >> a;
+	cout << "Segundo valor: ";
+	cin >> b;
+	suma = a / b;
+	cout << "La suma es: " << suma;
+	pausa();
+
 }
